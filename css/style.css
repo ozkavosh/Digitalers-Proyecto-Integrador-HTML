@@ -110,7 +110,7 @@ a {
   }
 }
 
-/*ABOUT*/
+/*INDEX ABOUT*/
 
 #about {
   display: flex;
@@ -218,10 +218,118 @@ a {
   }
 }
 
-/*REASON*/
-#aboutWrapper{
+/*ABOUT REASON*/
+#reasonWrapper{
   height: 100vh;
   background-color: var(--quaternaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .reasonContent {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    & .reasonSubHeading {
+      color: var(--secondaryColor);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
+
+    & .reasonHeading {
+      color: var(--primaryColor);
+      font-family: var(--secondaryFont);
+      font-weight: 400;
+      font-size: 2rem;
+      width: 60%;
+    }
+
+    & .reasonTextColumns{
+      width: 90%;
+      display: flex;
+      gap: 4em;
+      color: var(--primaryColor);
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 2em;
+      opacity: .9;
+
+      & .reasonTextColumn{
+        vertical-align: baseline;
+        line-height: 27px;
+        &:first-child::first-letter{
+          font-family: var(--secondaryFont);
+          font-size: 1.8rem;
+          font-weight: 500;
+          background-color: var(--secondaryColor);
+          padding: .1em .4em;
+          border-radius: 4px;
+          margin-right: 6px;
+        }
+
+      }
+    }
+  }
+}
+
+/*ABOUT STAFF*/
+#staffWrapper{
+  background-color: var(--primaryColor);
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .staffContent{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    & .staffSubHeading{
+      color: var(--secondaryColor);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
+
+    & .staffHeading{
+      color: var(--quaternaryColor);
+      font-family: var(--secondaryFont);
+      font-weight: 400;
+      font-size: 3rem;
+      width: 60%;
+    }
+
+    & .staffMembers{
+      margin-top: 5em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+
+      & .staffMember{
+        width: calc(100% / 4 - 2em);
+        display: flex;
+        gap: .5em;
+        flex-direction: column;
+        align-items: center;
+
+        & .staffMemberName{
+          color: var(--quaternaryColor);
+          font-family: var(--secondaryFont);
+          font-weight: 300;
+        }
+
+        & .staffMemberBrief{
+          text-align: center;
+          font-size: 13px;
+        }
+      }
+    }
+  }
 }
 
 /*FOOTER*/
