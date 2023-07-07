@@ -85,9 +85,28 @@ a {
   }
 
   &.about {
+    background-image: url("../img/aboutBg.jpg");
+  }
+
+  &.services {
+    background-image: url("../img/servicesBg.jpg");
+
+    & .bannerSubHeading {
+      color: var(--primaryColor);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+    }
+
+    & .bannerHeading {
+      width: 55%;
+      text-align: center;
+    }
+  }
+
+  &.about, &.services {
     padding-left: 0;
     align-items: center;
-    background-image: url("../img/aboutBg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -326,6 +345,80 @@ a {
         & .staffMemberBrief{
           text-align: center;
           font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+/*SERVICES SERVICES*/
+#servicesWrapper{
+  min-height: 100vh;
+  background-color: var(--primaryColor);
+  display: flex;
+  padding: 8em 0 2em 0;
+  align-items: center;
+  justify-content: center;
+
+  & .servicesContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3em;
+    width: 60%;
+
+    & .service{
+      gap: 2em;
+      display: flex;
+      flex-direction: column;
+
+      & .serviceText{
+        display: flex;
+        align-items: baseline;
+        gap: 2em;
+        opacity: .6;
+
+        & .serviceName{
+          color: var(--quaternaryColor);
+          font-family: var(--secondaryFont);
+          font-size: 1.8em;
+          width: 45%;
+        }
+
+        & .serviceInfo{
+          display: flex;
+          flex-direction: column;
+          gap: 2em;
+
+          & .serviceDescription{
+            font-size: 16px;
+          }
+
+          & .serviceItems{
+            list-style-type: none;
+            margin-left: .5em;
+
+            & .serviceItem{
+              font-size: 12px;
+              margin-bottom: 2em;
+              position: relative;
+
+              & .serviceItemIcon{
+                font-size: 16px;
+                margin-right: 10px;
+              }
+
+              &::after{
+                position: absolute;
+                content: "";
+                display: block;
+                opacity: .2;
+                background-color: var(--quaternaryColor);
+                bottom: -10px;
+                width: 64px;
+                height: 2px;
+              }
+            }
+          }
         }
       }
     }
