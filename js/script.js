@@ -26,9 +26,9 @@ const handleFooterButtonClick = () => {
 };
 
 const handleLoader = () => {
-    $(".loaderWrapper").fadeOut("slow");
+    $(".loaderWrapper").fadeOut("fast");
 }
 
-$(document).ready(handleLoader);
+$(window).on("load", handleLoader);
 $(".footerButton").click(handleFooterButtonClick);
 $(document).scroll(handleNavBar);
