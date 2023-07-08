@@ -8,7 +8,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>Consultorio</title>
   </head>
   <body>
     <header id="header" class="secondary">
@@ -39,25 +39,28 @@
     </header>
 
     <section id="banner" class="contact">
-      <p class="bannerSubHeading">Contactanos</p>
-      <h2 class="bannerHeading">Lorem ipsum dolor sit amet, consectetur adipisicing elit do eiusmodinc</h2>
+      <p class="bannerSubHeading">Contáctenos</p>
+      <h2 class="bannerHeading">Nuestro equipo estará encantado de responder a sus inquietudes</h2>
+      <a href="#contactFormWrapper" class="bannerLink underline-on-hover"
+        ><i class="fas fa-chevron-circle-right"></i> Complete el formulario</a
+      >
     </section>
 
     <section id="contactFormWrapper">
-      <h2 class="contactFormHeading">Envianos un mensaje</h2>
+      <h2 class="contactFormHeading">Envíenos un mensaje</h2>
       <form action="#" class="contactForm">
         <div class="inputRow two">
-          <input type="text" name="fullName" placeholder="Su nombre">
-          <input type="email" name="email" placeholder="Su correo">
+          <input type="text" name="fullName" placeholder="Su nombre" required>
+          <input type="email" name="email" placeholder="Su correo" required>
         </div>
         <div class="inputRow">
-          <input type="text" name="subject" placeholder="Consulta">
+          <input type="text" name="subject" placeholder="Consulta" required minlength="12" maxlength="32">
         </div>
         <div class="inputRow">
-          <textarea name="message" id="message" placeholder="Detalle de su consulta"></textarea>
+          <textarea name="message" id="message" placeholder="Detalle de su consulta" required></textarea>
         </div>
         <div class="inputRow">
-          <button class="formButton">Enviar</button>
+          <button class="formButton" type="submit">Enviar</button>
         </div>
       </form>
     </section>
@@ -66,7 +69,7 @@
       <div class="footerContent">
         <div class="footerColumn">
           <p class="footerColumnText">
-            Contacta con nosotros para más información
+            Contacte con nosotros para más información
           </p>
           <button class="footerButton">Solicitar información</button>
         </div>
@@ -76,35 +79,35 @@
 
           <div class="footerLinks">
             <div class="footerLinksColumn">
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Aenean solli
+              <a href="./servicios.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Tratamientos
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Duis sed odio sit
+              <a href="./contacto.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Consultas
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Morbi accumsan
+              <a href="./turnos.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Agendar una cita
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Nam nec tellus
+              <a href="./noticias.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Novedades
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Class aptent
+              <a href="./contacto.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Trabaje con nosotros
               </a>
             </div>
 
             <div class="footerLinksColumn">
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Duis sed odio
+              <a href="./contacto.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Realizar un reclamo
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Morbi accum
+              <a href="./nosotros.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Preguntas frecuentes
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Nam nec
+              <a href="./turnos.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Verificar turno
               </a>
-              <a href="#" class="footerLink">
-                <i class="fas fa-long-arrow-alt-right"></i>Class aptent
+              <a href="./noticias.html" class="footerLink">
+                <i class="fas fa-long-arrow-alt-right"></i>Actualizaciones
               </a>
             </div>
           </div>
@@ -127,18 +130,30 @@
           por Augusto Silva
         </div>
 
-        <div class="footerButtons">
-          <a href="#" class="footerButton">
+        <div class="footerSocialButtons">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="footerSocialButton"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="footerButton">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="footerSocialButton"
+          >
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="footerButton">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="footerSocialButton"
+          >
             <i class="fab fa-instagram"></i>
           </a>
 
-          <a href="#banner" class="returnButton"
+          <a href="#" class="returnButton"
             ><i class="fas fa-chevron-up"></i
           ></a>
         </div>
@@ -148,6 +163,7 @@
     <div class="loaderWrapper">
       <span class="loader"></span>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/script.js"></script>
   </body>

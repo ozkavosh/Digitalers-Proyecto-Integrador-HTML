@@ -92,6 +92,8 @@ a {
     background-image: url("../img/contactBg.jpg");
     background-position: top;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
     & .bannerSubHeading {
       color: var(--quaternaryColor);
@@ -103,6 +105,16 @@ a {
     & .bannerHeading {
       color: var(--quaternaryColor);
       width: 60%;
+    }
+
+    & .bannerLink {
+      color: var(--quaternaryColor);
+
+      &.underline-on-hover {
+        &::after {
+          background-color: var(--tertiaryColor);
+        }
+      }
     }
   }
 
@@ -138,6 +150,12 @@ a {
 
     & .bannerLink {
       color: var(--primaryColor);
+
+      &.underline-on-hover {
+        &::after {
+          background-color: var(--primaryColor);
+        }
+      }
     }
   }
 
@@ -150,7 +168,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
   }
 
   & .bannerHeading {
@@ -173,6 +190,7 @@ a {
 #about {
   display: flex;
   background-color: var(--quaternaryColor);
+  min-height: 100vh;
 
   & #location {
     background-image: url("../img/clinicBg.jpg");
@@ -180,7 +198,6 @@ a {
     flex-direction: column;
     gap: 1.4em;
     width: 65rem;
-    height: 50rem;
     padding: 12rem 1rem 0 15rem;
     color: var(--primaryColor);
 
@@ -214,7 +231,7 @@ a {
     align-self: stretch;
     background-color: var(--primaryColor);
     width: 100%;
-    padding: 10rem 0 0 4rem;
+    padding: 10rem 0 5.5rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 3.5em;
@@ -278,7 +295,7 @@ a {
 
 /*ABOUT REASON*/
 #reasonWrapper {
-  height: 100vh;
+  height: 110vh;
   background-color: var(--quaternaryColor);
   display: flex;
   align-items: center;
@@ -528,7 +545,7 @@ a {
 
 /*CONTACT*/
 #contactFormWrapper {
-  height: 100vh;
+  height: 110vh;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/contactGlasses.png");

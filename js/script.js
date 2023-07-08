@@ -29,6 +29,18 @@ const handleLoader = () => {
     $(".loaderWrapper").fadeOut("fast");
 }
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  Swal.fire({
+    title: "¡Gracias!",
+    text: "Su consulta ha sido enviado con éxito",
+    icon: "success",
+    confirmButtonText: "Aceptar",
+  });
+  e.target.reset();
+}
+
 $(window).on("load", handleLoader);
 $(".footerButton").click(handleFooterButtonClick);
+$(".contactForm").submit(handleSubmit);
 $(document).scroll(handleNavBar);
