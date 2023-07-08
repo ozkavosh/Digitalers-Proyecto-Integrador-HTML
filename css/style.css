@@ -126,6 +126,21 @@ a {
     background-image: url("../img/newsBg.jpg");
   }
 
+  &.error{
+    background-image: url("../img/errorBg.jpg");
+
+    & .bannerSubHeading {
+      color: var(--quaternaryColor);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+    }
+
+    & .bannerLink{
+      color: var(--primaryColor);
+    }
+  }
+
   &.about, &.services, &.news {
     padding-left: 0;
     align-items: center;
