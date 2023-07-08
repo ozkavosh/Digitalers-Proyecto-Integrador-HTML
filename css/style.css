@@ -126,7 +126,7 @@ a {
     background-image: url("../img/newsBg.jpg");
   }
 
-  &.error{
+  &.error {
     background-image: url("../img/errorBg.jpg");
 
     & .bannerSubHeading {
@@ -136,12 +136,14 @@ a {
       margin-bottom: 1rem;
     }
 
-    & .bannerLink{
+    & .bannerLink {
       color: var(--primaryColor);
     }
   }
 
-  &.about, &.services, &.news {
+  &.about,
+  &.services,
+  &.news {
     padding-left: 0;
     align-items: center;
     background-attachment: fixed;
@@ -275,7 +277,7 @@ a {
 }
 
 /*ABOUT REASON*/
-#reasonWrapper{
+#reasonWrapper {
   height: 100vh;
   background-color: var(--quaternaryColor);
   display: flex;
@@ -303,7 +305,7 @@ a {
       width: 60%;
     }
 
-    & .reasonTextColumns{
+    & .reasonTextColumns {
       width: 90%;
       display: flex;
       gap: 4em;
@@ -313,10 +315,11 @@ a {
       margin-top: 2em;
       opacity: .9;
 
-      & .reasonTextColumn{
+      & .reasonTextColumn {
         vertical-align: baseline;
         line-height: 27px;
-        &:first-child::first-letter{
+
+        &:first-child::first-letter {
           font-family: var(--secondaryFont);
           font-size: 1.8rem;
           font-weight: 500;
@@ -332,27 +335,27 @@ a {
 }
 
 /*ABOUT STAFF*/
-#staffWrapper{
+#staffWrapper {
   background-color: var(--primaryColor);
   height: 130vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  & .staffContent{
+  & .staffContent {
     width: 70%;
     display: flex;
     flex-direction: column;
     gap: 1em;
 
-    & .staffSubHeading{
+    & .staffSubHeading {
       color: var(--secondaryColor);
       text-transform: uppercase;
       letter-spacing: 4px;
       font-weight: 300;
     }
 
-    & .staffHeading{
+    & .staffHeading {
       color: var(--quaternaryColor);
       font-family: var(--secondaryFont);
       font-weight: 400;
@@ -360,26 +363,26 @@ a {
       width: 60%;
     }
 
-    & .staffMembers{
+    & .staffMembers {
       margin-top: 5em;
       display: flex;
       flex-wrap: wrap;
       gap: 2em;
 
-      & .staffMember{
+      & .staffMember {
         width: calc(100% / 4 - 2em);
         display: flex;
         gap: .5em;
         flex-direction: column;
         align-items: center;
 
-        & .staffMemberName{
+        & .staffMemberName {
           color: var(--quaternaryColor);
           font-family: var(--secondaryFont);
           font-weight: 300;
         }
 
-        & .staffMemberBrief{
+        & .staffMemberBrief {
           text-align: center;
           font-size: 13px;
         }
@@ -389,7 +392,7 @@ a {
 }
 
 /*SERVICES*/
-#servicesWrapper{
+#servicesWrapper {
   min-height: 100vh;
   background-color: var(--primaryColor);
   display: flex;
@@ -397,54 +400,54 @@ a {
   align-items: center;
   justify-content: center;
 
-  & .servicesContent{
+  & .servicesContent {
     display: flex;
     flex-direction: column;
     gap: 2.3em;
     width: 60%;
 
-    & .service{
+    & .service {
       gap: 2em;
       display: flex;
       flex-direction: column;
 
-      & .serviceText{
+      & .serviceText {
         display: flex;
         align-items: baseline;
         gap: 2em;
         opacity: .6;
 
-        & .serviceName{
+        & .serviceName {
           color: var(--quaternaryColor);
           font-family: var(--secondaryFont);
           font-size: 1.8em;
           width: 45%;
         }
 
-        & .serviceInfo{
+        & .serviceInfo {
           display: flex;
           flex-direction: column;
           gap: 2em;
 
-          & .serviceDescription{
+          & .serviceDescription {
             font-size: 16px;
           }
 
-          & .serviceItems{
+          & .serviceItems {
             list-style-type: none;
             margin-left: .5em;
 
-            & .serviceItem{
+            & .serviceItem {
               font-size: 12px;
               margin-bottom: 2em;
               position: relative;
 
-              & .serviceItemIcon{
+              & .serviceItemIcon {
                 font-size: 16px;
                 margin-right: 10px;
               }
 
-              &::after{
+              &::after {
                 position: absolute;
                 content: "";
                 display: block;
@@ -463,7 +466,7 @@ a {
 }
 
 /*NEWS*/
-#newsWrapper{
+#newsWrapper {
   min-height: 100vh;
   background-color: var(--primaryColor);
   display: flex;
@@ -472,25 +475,25 @@ a {
   align-items: center;
   justify-content: center;
 
-  & .newsContent{
+  & .newsContent {
     width: 70%;
     display: flex;
     flex-direction: column;
     gap: 4em;
 
-    & .newsArticle{
+    & .newsArticle {
       display: flex;
       gap: 2em;
 
-      & .articleImg{
+      & .articleImg {
         height: 28em;
       }
 
-      & .articleContent{
+      & .articleContent {
         border: 2px solid rgba(167, 166, 166, 0.315);
         padding: 4rem;
 
-        & .articleTitle{
+        & .articleTitle {
           color: var(--quaternaryColor);
           font-weight: 400;
           font-size: 32px;
@@ -498,7 +501,7 @@ a {
           width: 70%;
         }
 
-        & .articleText{
+        & .articleText {
           line-height: 28px;
           font-size: 16px;
         }
@@ -506,17 +509,17 @@ a {
     }
   }
 
-  & .information{
+  & .information {
     margin: 6em 0;
     width: 100%;
     text-align: center;
     color: var(--quaternaryColor);
 
-    & h2{
+    & h2 {
       font-weight: 300;
     }
 
-    & .infoLink{
+    & .infoLink {
       font-weight: 300;
       color: var(--secondaryColor);
     }
@@ -524,7 +527,7 @@ a {
 }
 
 /*CONTACT*/
-#contactFormWrapper{
+#contactFormWrapper {
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -534,12 +537,12 @@ a {
   gap: 1em;
   display: flex;
 
-  & .contactFormHeading{
+  & .contactFormHeading {
     writing-mode: vertical-rl;
     color: var(--quaternaryColor);
   }
 
-  & .contactForm{
+  & .contactForm {
     background-color: var(--quaternaryColor);
     display: flex;
     flex-direction: column;
@@ -548,30 +551,30 @@ a {
     padding: 4em;
     margin-right: 4em;
 
-    & .inputRow{
+    & .inputRow {
       display: flex;
       gap: 1em;
 
-      &.two{
-        & input{
+      &.two {
+        & input {
           width: calc(100% / 2);
         }
       }
 
-      & input{
+      & input {
         width: 100%;
         height: 32px;
         padding: 0 12px;
         border: none;
       }
 
-      & textarea{
+      & textarea {
         width: 100%;
         height: 10em;
         padding: 10px;
       }
 
-      & .formButton{
+      & .formButton {
         width: 100%;
         background-color: var(--secondaryColor);
         color: var(--primaryColor);
@@ -657,10 +660,10 @@ a {
     font-size: .7em;
     padding: .5em 26em 0 20em;
 
-    & .footerButtons {
+    & .footerSocialButtons {
       font-size: 1.4em;
 
-      & .footerButton {
+      & .footerSocialButton {
         margin-right: .5em;
         opacity: .5;
 
@@ -685,8 +688,49 @@ a {
   }
 }
 
-/*ANIMATIONS*/
+/*LOADER*/
+.loaderWrapper {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--quaternaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  &.loaded {
+    display: none;
+  }
+
+  & .loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      box-sizing: border-box;
+      width: 48px;
+      height: 48px;
+      border: 4px solid #FFF;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: animloader 2s ease-in-out infinite;
+    }
+
+    &::after {
+      border-color: var(--secondaryColor);
+      animation-delay: 1s;
+    }
+  }
+}
+
+/*ANIMATIONS*/
 .underline-on-hover {
   position: relative;
 
@@ -715,5 +759,17 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
