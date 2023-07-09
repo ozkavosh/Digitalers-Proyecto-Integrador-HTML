@@ -39,6 +39,10 @@ a {
   padding: 1em 10%;
   width: 100%;
 
+  & .hamburger{
+    display: none;
+  }
+
   &.fixedNav {
     position: fixed;
     z-index: 1;
@@ -194,6 +198,7 @@ a {
 
   & #location {
     background-image: url("../img/clinicBg.jpg");
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     gap: 1.4em;
@@ -784,5 +789,102 @@ a {
   100% {
     transform: scale(1);
     opacity: 0;
+  }
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1140px) {
+  #header {
+    padding: 1em 5%;
+    #navBarContainer {
+      display: none;
+    }
+
+    & .hamburger {
+      display: block;
+    }
+  }
+
+  #banner{
+    &.index{
+      padding-left: 5%;
+      background-position: left;
+    }
+  }
+
+  #about{
+    flex-direction: column;
+    & #location{
+      background-size: cover;
+      height: 100vh;
+      padding: 12rem 0 0 1rem;
+      width: 100%;
+    }
+
+    & #reasons{
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 0 5.5rem 0;
+      width: 100%;
+
+      & .reasonsHeading {
+        margin-left: 0;
+      }
+
+      & .reasonsList{
+        & .reasonsListItem{
+          justify-content: center;
+          align-items: center;
+
+          & .reasonTextWrapper{
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
+
+  #footerWrapper{
+    & .footerContent{
+      flex-direction: column;
+      padding: 3em 0 0 0;
+      justify-content: flex-start;
+      height: fit-content;
+      
+
+      & .footerColumn{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+
+        &:nth-child(3){
+          display: none;
+        }
+
+        & .footerButton{
+          margin-top: 2em;
+        }
+
+        & .footerLinks{
+          margin-top: 1em;
+          text-align: justify;
+          justify-content: center;
+          gap: 2em;
+          width: 90%;
+        }
+      }
+    }
+
+    & .footerInfo{
+      height: fit-content;
+      align-items: center;
+      padding: 0 0 2em 0;
+      flex-direction: column;
+      gap: 1.5em;
+
+      & .footerSocialButtons {
+        font-size: 1.8em;
+      }
+    }
   }
 }

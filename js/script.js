@@ -25,6 +25,10 @@ const handleFooterButtonClick = () => {
     : "../pages/contacto.html";
 };
 
+const handleHamburgerClick = () => {
+  $(".hamburger").toggleClass("is-active");
+}
+
 const handleLoader = () => {
     $(".loaderWrapper").fadeOut("fast");
 }
@@ -41,6 +45,7 @@ const handleSubmit = (e) => {
 }
 
 $(window).on("load", handleLoader);
+$(".hamburger").click(handleHamburgerClick);
 $(".footerButton").click(handleFooterButtonClick);
 $(".contactForm").submit(handleSubmit);
 $(document).scroll(handleNavBar);
