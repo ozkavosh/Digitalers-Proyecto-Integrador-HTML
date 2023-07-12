@@ -39,7 +39,7 @@ a {
   padding: 1em 10%;
   width: 100%;
 
-  & .hamburger{
+  & .hamburger, & .hamburgerMenu{
     display: none;
   }
 
@@ -792,6 +792,24 @@ a {
   }
 }
 
+@keyframes showMenu {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes hideMenu {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
 /*RESPONSIVE*/
 @media screen and (max-width: 1140px) {
   #header {
@@ -800,13 +818,63 @@ a {
       display: none;
     }
 
-    & .hamburger {
+    & .hamburgerButton {
       display: block;
       background: none;
       border: none;
       outline: none;
       color: var(--primaryColor);
-      font-size: 1.4rem;
+      cursor: pointer;
+
+      &.open{
+        font-size: 1.4rem;
+      }
+    }
+
+    & .hamburgerMenu{
+      top:0;
+      left: 0;
+      z-index: 1;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--tertiaryColor);
+      opacity: .98;
+      display: none;
+
+      &.open{
+        display: flex;
+        animation: showMenu .5s ease-in-out;
+      }
+
+      &.close{
+        display: flex;
+        animation: hideMenu .5s ease-in-out;
+      }
+
+      & .hamburgerButton{
+        &.close{
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          font-size: 2rem;
+        }
+      }
+
+      & .hamburgerMenuList{
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        align-items: center;
+
+        & .hamburgerMenuItem{
+          margin: .5em 0;
+          font-size: 2rem;
+          color: var(--primaryColor);
+        }
+      }
     }
   }
 

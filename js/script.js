@@ -26,7 +26,19 @@ const handleFooterButtonClick = () => {
 };
 
 const handleHamburgerClick = () => {
-  $(".hamburger").toggleClass("is-active");
+  if($(".hamburgerMenu").hasClass("open")){
+    $(".hamburgerMenu").removeClass("open");
+    $(".hamburgerMenu").addClass("close");
+  } else {
+    $(".hamburgerMenu").removeClass("close");
+    $(".hamburgerMenu").addClass("open");
+  }
+}
+
+const handleMenuClosingAnimation = (e) => {
+  if(e.originalEvent.animationName === "hideMenu"){
+    $(".hamburgerMenu").removeClass("close");
+  }
 }
 
 const handleLoader = () => {
@@ -45,7 +57,8 @@ const handleSubmit = (e) => {
 }
 
 $(window).on("load", handleLoader);
-$(".hamburger").click(handleHamburgerClick);
+$(".hamburgerButton").click(handleHamburgerClick);
+$(".hamburgerMenu").on("animationend", handleMenuClosingAnimation);
 $(".footerButton").click(handleFooterButtonClick);
 $(".contactForm").submit(handleSubmit);
 $(document).scroll(handleNavBar);
