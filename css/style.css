@@ -39,7 +39,7 @@ a {
   padding: 1em 10%;
   width: 100%;
 
-  & .hamburger, & .hamburgerMenu{
+  & .hamburgerButton, & .hamburgerMenu{
     display: none;
   }
 
@@ -78,7 +78,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  min-height: 100vh;
   padding-left: 10%;
   background-position: center;
   background-size: cover;
@@ -300,7 +300,7 @@ a {
 
 /*ABOUT REASON*/
 #reasonWrapper {
-  height: 110vh;
+  min-height: 110vh;
   background-color: var(--quaternaryColor);
   display: flex;
   align-items: center;
@@ -359,7 +359,7 @@ a {
 /*ABOUT STAFF*/
 #staffWrapper {
   background-color: var(--primaryColor);
-  height: 130vh;
+  min-height: 130vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -917,6 +917,47 @@ a {
     }
   }
 
+  #reasonWrapper{
+    padding: 2rem 0;
+
+    & .reasonContent{
+
+      & .reasonHeading{
+        width: 100%;
+      }
+
+      & .reasonTextColumns{
+        gap: 2em;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+  }
+
+  #staffWrapper{
+    padding: 2rem 0;
+
+    & .staffContent{
+      width: 80%;
+      & .staffHeading{
+        width: 100%;
+      }
+
+      & .staffMembers{
+        justify-content: center;
+        gap: 2em;
+
+        & .staffMember{
+          width: calc(100% / 2 - 2em);
+
+          & .staffMemberName{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
   #footerWrapper{
     & .footerContent{
       flex-direction: column;
@@ -980,6 +1021,39 @@ a {
       & .bannerHeading{
         text-align: center;
         font-size: 3rem;
+      }
+    }
+
+    &.about{
+      & .bannerHeading{
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  #reasonWrapper{
+    & .reasonContent{
+      width: 80%;
+      & .reasonHeading{
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #staffWrapper{
+    & .staffContent{
+      & .staffHeading{
+        font-size: 2rem;
+      }
+
+      & .staffMembers{
+        margin-top: 3rem;
+
+        & .staffMember{
+          width: 100%;
+        }
       }
     }
   }
