@@ -883,6 +883,33 @@ a {
       padding: .5rem;
       background-position: left;
     }
+
+    &.services{
+      & .bannerHeading{
+        font-size: 2.6rem;
+        width: 75%;
+      }
+    }
+
+    &.news{
+      & .bannerHeading{
+        font-size: 2.7rem;
+      }
+    }
+
+    &.contact{
+      & .bannerHeading{
+        font-size: 2.7rem;
+        width: 75%;
+      }
+    }
+
+    &.error{
+      & .bannerHeading{
+        font-size: 2.7rem;
+        width: 75%;
+      }
+    }
   }
 
   #about{
@@ -955,6 +982,68 @@ a {
           }
         }
       }
+    }
+  }
+
+  #servicesWrapper{
+    padding: 4rem 0;
+
+    & .servicesContent{
+      width: 80%;
+
+      & .service{
+        & .serviceText{
+          & .serviceName{
+            width: 100%;
+          }
+
+          & .serviceInfo{
+            & .serviceItems{
+              & .serviceItem{
+                &::after{
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #newsWrapper{
+    & .newsContent{
+      width: 90%;
+
+      & .newsArticle{
+        flex-direction: column;
+        gap: 2em;
+
+        & .articleImg{
+          align-self: center;
+          width: min(25rem, 100%);
+        }
+
+        & .articleContent{
+          padding: 2rem;
+        }
+      }
+    }
+
+    & .information{
+      margin: 2em 0;
+      width: 90%;
+    }
+  }
+
+  #contactFormWrapper{
+    justify-content: center;
+    height: 100vh;
+    gap: .5rem;
+
+    & .contactForm{
+      margin-right: 0;
+      width: 90%;
     }
   }
 
@@ -1031,21 +1120,54 @@ a {
         text-align: center;
       }
     }
+
+    &.services{
+      & .bannerHeading{
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    &.contact, &.error{
+      padding: 0;
+      align-items: center;
+      & .bannerSubHeading{
+        width: 90%;
+        text-align: center;
+      }
+
+      & .bannerHeading{
+        font-size: 2.5rem;
+        width: 90%;
+        text-align: center;
+      }
+    }
   }
 
   #reasonWrapper{
     & .reasonContent{
       width: 80%;
+
+      & .reasonSubHeading{
+        text-align: center;
+      }
+
       & .reasonHeading{
         font-size: 2rem;
+        text-align: center;
       }
     }
   }
 
   #staffWrapper{
     & .staffContent{
+      & .staffSubHeading{
+        text-align: center;
+      }
+
       & .staffHeading{
         font-size: 2rem;
+        text-align: center;
       }
 
       & .staffMembers{
@@ -1055,6 +1177,47 @@ a {
           width: 100%;
         }
       }
+    }
+  }
+
+  #servicesWrapper{
+    & .servicesContent{
+      width: 90%;
+
+      & .service{
+        gap: 1rem;
+        & .serviceText{
+          flex-direction: column;
+          gap: 1rem;
+          & .serviceName{
+            width: 100%;
+          }
+
+          & .serviceInfo{
+            & .serviceItems{
+              & .serviceItem{
+                &::after{
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contactFormWrapper{
+    flex-direction: column;
+
+    & .contactFormHeading{
+      writing-mode: horizontal-tb;
+      text-align: center;
+    }
+
+    & .contactForm{
+      width: 90%;
+      padding: 2rem;
     }
   }
 }
