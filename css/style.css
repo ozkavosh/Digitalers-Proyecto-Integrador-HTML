@@ -795,19 +795,24 @@ a {
 /*RESPONSIVE*/
 @media screen and (max-width: 1140px) {
   #header {
-    padding: 1em 5%;
+    padding: 1em;
     #navBarContainer {
       display: none;
     }
 
     & .hamburger {
       display: block;
+      background: none;
+      border: none;
+      outline: none;
+      color: var(--primaryColor);
+      font-size: 1.4rem;
     }
   }
 
   #banner{
     &.index{
-      padding-left: 5%;
+      padding: .5rem;
       background-position: left;
     }
   }
@@ -870,7 +875,7 @@ a {
           text-align: justify;
           justify-content: center;
           gap: 2em;
-          width: 90%;
+          width: 100%;
         }
       }
     }
@@ -880,10 +885,33 @@ a {
       align-items: center;
       padding: 0 0 2em 0;
       flex-direction: column;
+      text-align: center;
       gap: 1.5em;
 
       & .footerSocialButtons {
         font-size: 1.8em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #header{
+    padding: .7em;
+
+    & #headerTitle{
+      font-size: 1.6rem;
+    }
+  }
+
+  #banner{
+    &.index{
+      padding: 0;
+      align-items: center;
+
+      & .bannerHeading{
+        text-align: center;
+        font-size: 3rem;
       }
     }
   }
